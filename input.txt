@@ -1,0 +1,153 @@
+1
+H(Bob)
+3
+D(x,y) => H(x)
+A(x) => D(x,x)
+A(Bob)
+
+True
+
+1
+H(Adam)
+3
+D(z,y) => H(x)
+A(x) => D(x,x)
+A(Bob)
+
+True
+
+1
+C(AA,BB,CC)
+3
+A(x,z) ^ B(y,z) => C(AA,BB,x)
+A(CC,EE)
+B(KK,LL)
+
+False
+
+1
+C(Alice)
+6
+A(x,y) ^ B(y,z) => C(z)
+D(z) => A(x,y)
+R(x) => D(z)
+D(Duck)
+R(Tom)
+B(Max,Alice)
+
+True
+
+1
+H(John)
+3
+A(x,F) => H(x)
+B(x,y) => A(x,y)
+B(John,F)
+
+True
+
+
+True
+
+6
+F(Bob)
+H(John)
+~H(Alice)
+~H(John)
+G(Bob)
+G(Tom)
+14
+A(x) => H(x)
+D(x,y) => ~H(y)
+B(x,y) ^ C(x,y) => A(x)
+B(John,Alice)
+B(John,Bob)
+D(x,y) ^ Q(y) => C(x,y)
+D(John,Alice)
+Q(Bob)
+D(John,Bob)
+F(x) => G(x)
+G(x) => H(x)
+H(x) => F(x)
+R(x) => H(x)
+R(Tom)
+
+False
+True
+True
+False
+False
+True
+
+3
+Uncle(John,Sarah)
+Sibling(John,Sarah)
+Sibling(John,Neelu)
+10
+Male(x) ^ Parent(m,z) ^ Sibling(x,m) => Uncle(x,z)
+Father(x,y) => Parent(x,y)
+Mother(x,y) => Parent(x,y)
+Parent(x,p) ^ Parent(x,w) ^ Parent(a,b) ^ Parent(c,d) => Sibling(p,w)
+Male(John)
+Father(Shawn,John)
+Father(Suresh,Ramesh)
+Mother(Kill,Bill)
+Mother(Neelu,Sarah)
+Father(Shawn,Neelu)
+
+True
+False
+True
+
+1
+H(John)
+3
+A(y,John) => H(x)
+A(Bob,Jam)
+A(Mob,John)
+
+True
+
+1
+X(C)
+4
+A(x,y) ^ B(x,y) => X(z)
+E(X) => A(x,x)
+E(X)
+B(X,Y)
+
+False
+
+1
+X(C)
+4
+B(x,y) ^ A(x,y) => X(z)
+E(X) => A(x,x)
+E(X)
+B(X,Y)
+
+False
+
+1
+H(Jam)
+6
+M(x) ^ Knows(x,John) => H(z)
+Na(Cool) => Knows(James,Adam)
+N(Cool) => Knows(Mom,John)
+M(Mom)
+N(Cool)
+Na(Cool)
+
+True
+
+1
+H(Jam,Bake)
+6
+M(x,x) ^ Knows(x,John) => H(Jam,Bake)
+Na(Cool,Cool) => Knows(James,Adam)
+N(Cool,Cool) => Knows(Mom,John)
+M(Mom,Mom)
+N(Cool,Cool)
+Na(Cool,Cool)
+
+True
